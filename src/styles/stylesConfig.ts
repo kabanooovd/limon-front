@@ -1,3 +1,6 @@
 export const colors = {
-  appBackground: '#c2c2c2',
+  appBackground: '#e5e5e5',
+  headerBackground: '#0c005c',
+  footerBackground: '#737373',
+  white: '#FFFFFF'
 }
