@@ -1,9 +1,9 @@
 import { makeAutoObservable } from 'mobx'
 import { ControllerItems } from '../api/ControllerItems'
-import { IItems } from '../types'
+import { IItem } from '../types'
 
 class Items {
-  items: IItems[] = []
+  items: IItem[] = []
 
   constructor() {
     makeAutoObservable(this)
