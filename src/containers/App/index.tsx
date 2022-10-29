@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { RoutesComponent } from "../Routes/Routes"
 
 const StyledApp = styled.div`
   // width: 100%;
@@ -8,6 +9,6 @@ const StyledApp = styled.div`
 
 export const App = () => {
   return <StyledApp>
-    sdsds
+      <RoutesComponent />
   </StyledApp>
 }
