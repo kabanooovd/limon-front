@@ -5,7 +5,7 @@ import { Icon } from "../../components/index";
 import { colors } from "../../styles/stylesConfig";
 
 const StyledRating = styled.div`
-  border: 1px dolid red;  
+  
 `;
 
 interface IRating {
