@@ -13,7 +13,6 @@ const StyledItemCard = styled.div`
   background: ${colors.white};
   color: green;
   margin: 20px;
-  cursor: pointer;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   transition: box-shadow 0.2s ease-in-out;
   &:hover {
@@ -29,7 +28,7 @@ const ItemHeader = styled.div`
 `;
 
 export const ItemCard = ({ id, name, price, rating, image } : IItem) => {
-  return <StyledItemCard>
+  return <StyledItemCard onClick={() => alert('dfdf')}>
     <ItemHeader>{name}</ItemHeader>
     <Flex direction="column" minHeight="270px" justify="space-between">
       <Flex justify="center">

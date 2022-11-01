@@ -4,6 +4,7 @@ import { ItemCard } from './ItemCard'
 import { Icon } from './Icon'
 import { Rating } from './Rating'
 import { Image } from './Image'
+import { Navi } from './Navi'
 
 export {
   Header,
@@ -12,4 +13,5 @@ export {
   Icon,
   Rating,
   Image,
+  Navi,
 }

@@ -4,6 +4,8 @@ import { colors } from "../../styles/stylesConfig";
 import '../../assets/style.css'
 import { Flex } from "../../styles/uiToolKit";
 import { Icon } from "../../components";
+import { NavigationsContainer } from "../../containers";
+import { onGoToRoute } from "../../utils/onGoToRoute";
 
 const StylesHeader = styled.div`
   background: ${colors.headerBackground};
@@ -16,12 +18,16 @@ const StylesHeader = styled.div`
 `;
 
 export const Header = () => {
+  const onGetHome = () => onGoToRoute('')
+  const onGoToCart = (route: string) => onGoToRoute(route)
   return <StylesHeader>
       <Flex padding="20px" justify="space-between" align="center">
-        <Flex>Logo</Flex>
-        <Flex>content</Flex>
+        <Flex onClick={onGetHome}>Logo</Flex>
+        <Flex>
+          <NavigationsContainer />
+        </Flex>
         <Flex staticBackground="grey" BorderRadius="20px" padding="5px" justify="center" align="center" cursor="pointer">
-          <Icon iconName="cart2" iconColor={colors.headerBackground} iconWidth="20px" iconHeight="20px"/>
+          <Icon iconName="cart2" iconColor={colors.headerBackground} iconWidth="20px" iconHeight="20px" onClick={() => onGoToCart('cart')}/>
         </Flex>
       </Flex>
   </StylesHeader>

@@ -1,12 +1,15 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { ItemsPage } from "../../pages";
+import { routesMapper } from "../../config"
+import { Help, AboutUs } from "../../containers";
 
 export const RoutesComponent = () => {
-  return <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<ItemsPage />} />
-      <Route path="cart" element={<h1>cart</h1>} />
-    </Routes>
-  </BrowserRouter>
+  const {cart, help, about} = routesMapper
+  return <Routes>
+    <Route path="/" element={<ItemsPage />} />
+    <Route path={cart} element={<h1>cart</h1>} />
+    <Route path={help} element={<Help />} />
+    <Route path={about} element={<AboutUs />} />
+  </Routes>
 }

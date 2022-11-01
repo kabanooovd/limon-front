@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 interface PStyledFlex {
+	onClick?: () => void;
 	direction?: string;
 	align?: "center" | "space-between" | "space-around" | "flex-end" | "none";
 	justify?: "center" | "space-between" | "space-around" | "flex-end";
