@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledNavi = styled.div`
+  font-family: "Roboto", sans-serif;
   background: grey;
   color: white;
   padding: 10px;

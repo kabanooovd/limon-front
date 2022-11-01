@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Footer, Header } from '../../components'
 import { colors } from '../../styles/stylesConfig'
 import { App } from '../../containers'
-import { BrowserRouter } from 'react-router-dom'
+import "../../assets/fonts/fonts.css"
 
 const StyledAppContainer = styled.div`
   padding: 0px;
