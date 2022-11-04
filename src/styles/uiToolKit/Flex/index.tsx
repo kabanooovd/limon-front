@@ -29,7 +29,7 @@ interface PStyledFlex {
 const StyledFlex = styled.div<PStyledFlex>`
 	display: flex;
 	flex-wrap: ${(props) => props.Wrap || "nowrap"};
-	font-family: ${(props) => props.fFamily || "auto"};
+	// font-family: ${(props) => props.fFamily || "auto"};
 	flex-direction: ${(props) => props.direction || "row"};
 	align-items: ${(props) => props.align || "stretch"};
 	justify-content: ${(props) => props.justify || "stretch"};

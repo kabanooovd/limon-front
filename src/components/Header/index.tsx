@@ -6,14 +6,11 @@ import { Flex } from "../../styles/uiToolKit";
 import { Icon } from "../../components";
 import { NavigationsContainer } from "../../containers";
 import { onGoToRoute } from "../../utils/onGoToRoute";
+import { Logo } from "../../assets/Logo";
 
 const StylesHeader = styled.div`
   background: ${colors.headerBackground};
-  // -webkit-box-shadow: 0px -5px 10px -3px rgb(34 60 80 / 50%) inset;
-  // -moz-box-shadow: 0px -5px 10px -3px rgb(34 60 80 / 50%) inset;
-  // box-shadow: 0px -5px 10px -3px rgb(34 60 80 / 50%) inset;
   width: 100%;
-  // min-height: 50px;
   color: ${colors.white}
 `;
 
@@ -21,8 +18,10 @@ export const Header = () => {
   const onGetHome = () => onGoToRoute('')
   const onGoToCart = (route: string) => onGoToRoute(route)
   return <StylesHeader>
-      <Flex padding="20px" justify="space-between" align="center">
-        <Flex onClick={onGetHome}>Logo</Flex>
+      <Flex padding="10px" justify="space-between" align="center">
+        <Flex onClick={onGetHome} >
+          <Logo />
+        </Flex>
         <Flex>
           <NavigationsContainer />
         </Flex>

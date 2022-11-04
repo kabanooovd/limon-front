@@ -6,3 +6,14 @@ export const colors = {
   reatingStar: '#f5ef42',
   greyDark: '#a3a3a3',
 }
+
+export const fonts: {[key: string]: string} = {
+  globalFont: '"Open-sans", sans-serif',
+  roboto: '"Roboto", sans-serif',
+  monospace: '"monospace", sans-serif',
+  arial: '"arial", sans-serif',
+  verdana: '"Verdana", sans-serif',
+  courier: '"Courier New", monospace',
+  brush: '"Brush Script MT", cursive',
+  copperplate: 'Copperplate, Papyrus, fantasy',
+}

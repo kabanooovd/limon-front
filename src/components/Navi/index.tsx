@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "styled-components"
+import { fonts } from "../../styles/stylesConfig"
 
 const StyledNavi = styled.div`
-  font-family: "Roboto", sans-serif;
+  font-family: ${fonts.copperplate};
   background: grey;
   color: white;
   padding: 10px;
