@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { colors } from "../../styles/stylesConfig";
 import { IItem } from "../../types";
 import { Image, Rating } from "../../components";
-import { Flex, Modal } from "../../styles/uiToolKit";
+import { Flex } from "../../styles/uiToolKit";
 
 const StyledItemCard = styled.div`
   padding: 10px;
@@ -27,9 +27,8 @@ const ItemHeader = styled.div`
   color: grey;
 `;
 
-export const ItemCard = ({ id, name, price, rating, image } : IItem) => {
-  const [isShowModal, setIsShowModal] = React.useState<boolean>(false)
-  return <StyledItemCard onClick={() => setIsShowModal(true)}>
+export const ItemCard = ({ id, name, price, rating, image, onOpen } : IItem & {onOpen: (itemId: string) => void}) => {
+  return <StyledItemCard onClick={() => onOpen(id)}>
     <ItemHeader>{name}</ItemHeader>
     <Flex direction="column" minHeight="270px" justify="space-between">
       <Flex justify="center">
@@ -40,6 +39,5 @@ export const ItemCard = ({ id, name, price, rating, image } : IItem) => {
         {`${price} ₽`}
       </Flex>
     </Flex>
-    <Modal show={isShowModal}></Modal>
   </StyledItemCard>
 }
