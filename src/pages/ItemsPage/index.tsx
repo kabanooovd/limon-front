@@ -26,7 +26,7 @@ export const ItemsPage = observer(() => {
       itemsState.onGetItems()
     }
   }, [itemsState])
-
+  // TODO
   const onOpenModal = React.useCallback((itemId: string) => {
     setIsShowModal(true)
     navigate(itemId)
