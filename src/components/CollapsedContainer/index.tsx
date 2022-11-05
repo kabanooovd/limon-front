@@ -5,6 +5,7 @@ import { Flex } from "../../styles/uiToolKit";
 import { colors } from "../../styles/stylesConfig";
 
 interface ICollapsedContainerProps {
+  containerHeader: string;
   children: React.ReactNode,
 }
 
@@ -19,6 +20,8 @@ const StyledCollapsedContainer = styled.div`
 `;
 
 const CollapsedData = styled.div`
+  border-radius: 8px;
+
   padding: 10px;
 
   background: ${colors.greyLight};
@@ -27,8 +30,7 @@ const CollapsedData = styled.div`
   animation-duration: 1s;
 
   height: 100px;
-
-  overflow-Y: scroll;
+  overflow: auto;
 `;
 
 
@@ -38,7 +40,7 @@ export const CollapsedContainer = (props: ICollapsedContainerProps) => {
 
   return <StyledCollapsedContainer>
     <Flex justify="space-between" align="center" padding="10px">
-      <span>Toggle name</span>
+      <span>{props.containerHeader}</span>
       <Icon iconName="toggle-arrow" onClick={() => setIsCollapsed(!isCollapsed)}/>
     </Flex>
     {isCollapsed && <CollapsedData>

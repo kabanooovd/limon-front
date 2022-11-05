@@ -6,6 +6,7 @@ import { Rating } from './Rating'
 import { Image } from './Image'
 import { Navi } from './Navi'
 import { CollapsedContainer } from './CollapsedContainer'
+import { Button } from './Button'
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   Image,
   Navi,
   CollapsedContainer,
+  Button,
 }

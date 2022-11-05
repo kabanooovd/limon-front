@@ -1,13 +1,15 @@
-import { Icon } from "../../../components/Icon";
+import { Icon, Button } from "../../../components";
 import React from "react"
 import styled, { css, keyframes } from "styled-components";
 import { Flex } from "../index";
 import { colors } from "../../stylesConfig";
+import { IButton } from "../../../types";
 
 interface IModalProps {
   show: boolean,
   onClose: () => void,
   children: React.ReactNode,
+  buttons?: IButton[],
 }
 
 const Heading = keyframes`
@@ -31,9 +33,12 @@ const ModalContent = styled.div`
   background: ${colors.white};
   min-width: 600px;
   min-height: 400px;
+  max-height: 90%;
   border-radius: 8px;
   padding: 10px;
   position: relative;
+
+  overflow: auto;
 
   animation: ${Heading};
   animation-duration: .5s;
@@ -57,6 +62,13 @@ export const Modal = (props: IModalProps) => {
           <Icon iconName="close"/>
         </CloseButtonWrapper>
         {props.children}
+        {props.buttons && <Flex justify="center" margin="10px 0">
+          {
+            props.buttons.map((button, idx) => {
+              return <Button key={idx} onClick={button.onClick} name={button.name} width={'150px'} height={'30px'}/>
+            })
+          } 
+        </Flex>}
       </ModalContent>
     </Flex>
   </StyledModal>

@@ -16,3 +16,9 @@ export interface IItem extends IItems {
   description: string
   measures: IMeasures
 }
+
+export interface IButton {
+  name: string,
+  onClick?: () => void,
+  disabled?: boolean,
+}
