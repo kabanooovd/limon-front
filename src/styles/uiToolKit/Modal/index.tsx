@@ -23,11 +23,12 @@ const StyledModal = styled.div<IModalProps>`
   left: 0;
   height: 100vh;
   width:100vw;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px) saturate(20%) contrast(100%);
 `;
 
 const ModalContent = styled.div`
-  background: #ebebeb;
+  background: ${colors.white};
   min-width: 600px;
   min-height: 400px;
   border-radius: 8px;

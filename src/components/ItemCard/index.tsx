@@ -9,7 +9,7 @@ const StyledItemCard = styled.div`
   padding: 10px;
   border-radius: 8px;
   width: 280px;
-  height: 260px;
+  height: 250px;
   background: ${colors.white};
   color: green;
   margin: 20px;
@@ -27,18 +27,17 @@ const ItemHeader = styled.div`
   color: grey;
 `;
 
-export const ItemCard = ({ id, name, price, rating, image, category, onOpen } : IItems & {onOpen: (itemId: string) => void}) => {
+export const ItemCard = ({ id, name, price, rating, image, category, onOpen } : IItems & { onOpen: (itemId: string) => void} ) => {
   return <StyledItemCard onClick={() => onOpen(id)}>
     <ItemHeader>{name}</ItemHeader>
     <Flex direction="column" minHeight="200px" justify="space-between">
       <Flex justify="center">
         <Image image={image} width={'180px'} height={'180px'} />
       </Flex>
-      <Flex justify="space-between" margin="5px 0">
-        <span>Категория:</span>
-        <span>{category}</span>
+      <Flex>
+        <span>Категория: {category}</span>
       </Flex>
-      <Flex justify="space-between" align="center" margin="5px 0">
+      <Flex justify="space-between" align="center">
         <Rating rating={rating} />
         <span>{`${price} ₽`}</span>
       </Flex>

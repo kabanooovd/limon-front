@@ -1,4 +1,4 @@
-import { ItemModal } from "../../components/ItemCard/ItemModal";
+import { ItemModal } from "./ItemModal";
 import { toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import React from "react"
@@ -27,15 +27,16 @@ export const ItemsPage = observer(() => {
     }
   }, [itemsState])
 
-  const onOpenModal = (itemId: string) => {
+  const onOpenModal = React.useCallback((itemId: string) => {
     setIsShowModal(true)
     navigate(itemId)
-  }
+  }, [setIsShowModal, navigate])
 
-  const onCloseModal = () => {
-    setIsShowModal(false)
+  const onCloseModal = React.useCallback(() => {
     navigate(-1)
-  }
+    setIsShowModal(false)
+    itemsState.setItem(null)
+  }, [itemsState, setIsShowModal, navigate])
 
   return <> 
   <StyledItemsPage>    
@@ -52,6 +53,6 @@ export const ItemsPage = observer(() => {
             />
     })}
   </StyledItemsPage>
-  <ItemModal show={isShowModal} onClose={onCloseModal}/>
+  <ItemModal show={isShowModal} onClose={onCloseModal} onOpen={onOpenModal} />
   </>
 })

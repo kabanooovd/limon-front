@@ -10,11 +10,9 @@ const StyledNavigationsContainer = styled.div`
 
 export const NavigationsContainer = () => {
   return <StyledNavigationsContainer>
-    {navigations.map(({route, name}) => {
-      const onRote = () => {
-        onGoToRoute(route)
-      }
-      return <Navi onClick={onRote} name={name} />
+    {navigations.map(({route, name}, idx) => {
+      const onRote = () => onGoToRoute(route)
+      return <Navi key={idx} onClick={onRote} name={name} />
     })}
   </StyledNavigationsContainer>
 }

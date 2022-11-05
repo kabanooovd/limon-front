@@ -1,7 +1,7 @@
 import React from "react"
 
 export const Logo = () => {
-  return <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="50px" height="60px" viewBox="0 0 50 60" enable-background="new 0 0 50 60">  <image id="image0" width="50" height="60" x="0" y="0"
+  return <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="50px" height="60px" viewBox="0 0 50 60" enableBackground="new 0 0 50 60">  <image id="image0" width="50" height="60" x="0" y="0"
   href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA8CAYAAAAkNenBAAABfWlDQ1BpY2MAACiRfZE9SMNAHMVf
 04pfFQc7iDhkqE4WREUFF61CESqEWqFVB5NLv6BJQ5Li4ii4Fhz8WKw6uDjr6uAqCIIfII5OToou
 UuL/kkKLWA+O+/Hu3uPuHSBUi0yzAqOApttmIhYVU+lVsf0V3QigEzOYkpllzElSHC3H1z18fL2L
