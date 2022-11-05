@@ -5,6 +5,7 @@ import { Icon } from './Icon'
 import { Rating } from './Rating'
 import { Image } from './Image'
 import { Navi } from './Navi'
+import { CollapsedContainer } from './CollapsedContainer'
 
 export {
   Header,
@@ -14,4 +15,5 @@ export {
   Rating,
   Image,
   Navi,
+  CollapsedContainer,
 }

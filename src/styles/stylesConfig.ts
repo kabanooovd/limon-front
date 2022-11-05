@@ -5,6 +5,7 @@ export const colors = {
   white: '#FFFFFF',
   reatingStar: '#f5ef42',
   greyDark: '#a3a3a3',
+  greyLight: '#ebebeb',
 }
 
 export const fonts: {[key: string]: string} = {
