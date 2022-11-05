@@ -1,6 +1,6 @@
 import { Icon } from "../../../components/Icon";
 import React from "react"
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { Flex } from "../index";
 import { colors } from "../../stylesConfig";
 
@@ -9,6 +9,11 @@ interface IModalProps {
   onClose: () => void,
   children: React.ReactNode,
 }
+
+const Heading = keyframes`
+0% { top: -16.125em; }
+100% { top: 0;
+`;
 
 const StyledModal = styled.div<IModalProps>`
   z-index: auto;
@@ -28,6 +33,10 @@ const ModalContent = styled.div`
   border-radius: 8px;
   padding: 10px;
   position: relative;
+
+  animation: ${Heading};
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
 `
 
 const CloseButtonWrapper = styled.div`

@@ -39,8 +39,17 @@ export const ItemsPage = observer(() => {
 
   return <> 
   <StyledItemsPage>    
-    {currentItems.map(({id, name, price, rating, image}) => {
-      return <ItemCard key={id} id={id} name={name} price={price} rating={rating} image={image} onOpen={onOpenModal} />
+    {currentItems.map(({id, name, price, rating, image, category}) => {
+      return <ItemCard 
+              key={id} 
+              id={id} 
+              name={name} 
+              price={price} 
+              rating={rating} 
+              image={image}
+              category={category}
+              onOpen={onOpenModal} 
+            />
     })}
   </StyledItemsPage>
   <ItemModal show={isShowModal} onClose={onCloseModal}/>

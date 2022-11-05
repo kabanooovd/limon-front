@@ -1,9 +1,9 @@
 import { makeAutoObservable } from 'mobx'
 import { ControllerItems } from '../api/ControllerItems'
-import { IItem } from '../types'
+import { IItems } from '../types'
 
 class Items {
-  items: IItem[] = []
+  items: IItems[] = []
 
   constructor() {
     makeAutoObservable(this)
@@ -14,7 +14,7 @@ class Items {
       const items = await ControllerItems.onGetItems()
       this.items = items
     } catch(error) {
-      console.warn('!!! !!! ', error)
+      console.warn('items ', error)
     }
   }
 

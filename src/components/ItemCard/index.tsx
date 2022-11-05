@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { colors } from "../../styles/stylesConfig";
-import { IItem } from "../../types";
+import { IItems } from "../../types";
 import { Image, Rating } from "../../components";
 import { Flex } from "../../styles/uiToolKit";
 
@@ -9,7 +9,7 @@ const StyledItemCard = styled.div`
   padding: 10px;
   border-radius: 8px;
   width: 280px;
-  height: 300px;
+  height: 260px;
   background: ${colors.white};
   color: green;
   margin: 20px;
@@ -27,16 +27,20 @@ const ItemHeader = styled.div`
   color: grey;
 `;
 
-export const ItemCard = ({ id, name, price, rating, image, onOpen } : IItem & {onOpen: (itemId: string) => void}) => {
+export const ItemCard = ({ id, name, price, rating, image, category, onOpen } : IItems & {onOpen: (itemId: string) => void}) => {
   return <StyledItemCard onClick={() => onOpen(id)}>
     <ItemHeader>{name}</ItemHeader>
-    <Flex direction="column" minHeight="270px" justify="space-between">
+    <Flex direction="column" minHeight="200px" justify="space-between">
       <Flex justify="center">
         <Image image={image} width={'180px'} height={'180px'} />
       </Flex>
-      <Flex justify="space-between" align="center">
+      <Flex justify="space-between" margin="5px 0">
+        <span>Категория:</span>
+        <span>{category}</span>
+      </Flex>
+      <Flex justify="space-between" align="center" margin="5px 0">
         <Rating rating={rating} />
-        {`${price} ₽`}
+        <span>{`${price} ₽`}</span>
       </Flex>
     </Flex>
   </StyledItemCard>

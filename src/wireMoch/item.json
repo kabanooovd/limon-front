@@ -1,0 +1,14 @@
+{
+  "id": "11111tEST",
+  "name": "Кошелёк",
+  "price": 1500,
+  "category": "категория",
+  "rating": 1,
+  "image": "https://avatars.mds.yandex.net/get-mpic/5288039/img_id4523940586863127074.jpeg/orig",
+  "description": "Описание товара",
+  "measures": {
+    "length": "длина",
+    "width": "ширина",
+    "height": "высота"
+  }
+}

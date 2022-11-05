@@ -3,6 +3,7 @@
     "id": "11111",
     "name": "Кошелёк",
     "price": 1500,
+    "category": "категория",
     "rating": 1,
     "image": "https://avatars.mds.yandex.net/get-mpic/5288039/img_id4523940586863127074.jpeg/orig"
   },
@@ -10,6 +11,7 @@
     "id": "11112",
     "name": "Чехол",
     "price": 1500,
+    "category": "категория",
     "rating": 2,
     "image": "https://avatars.mds.yandex.net/get-mpic/5242010/img_id8961382057409538737.jpeg/orig"
   },
@@ -17,6 +19,7 @@
     "id": "11113",
     "name": "Очечьник",
     "price": 1500,
+    "category": "категория",
     "rating": 3,
     "image": "https://www.blackwoodbag.ru/upload/resize_cache/webp/upload/iblock/49c/49c5814221d2666bcb7077029d61c118.webp"
   },
@@ -24,6 +27,7 @@
     "id": "11114",
     "name": "Залупа",
     "price": 2500,
+    "category": "категория",
     "rating": 4,
     "image": "https://img-colinsrus.mncdn.com/Assets/Russia/Thumbs/korychnevj_muzh_koshelky_118268.jpeg"
   },
@@ -31,6 +35,7 @@
     "id": "11115",
     "name": "Тарантас",
     "price": 2500,
+    "category": "категория",
     "rating": 5,
     "image": "https://avatars.mds.yandex.net/get-mpic/5296089/img_id4513289760074395759.png/orig"
   }
