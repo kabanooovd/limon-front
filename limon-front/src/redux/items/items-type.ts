@@ -1,4 +1,4 @@
-import { setItems } from "./items-action";
+import { setIsFetchingItems, setItems } from "./items-action";
 
 export interface IItemsReducerState {
   data: IItem | null;
@@ -18,4 +18,5 @@ export interface IItem {
 // Items Action Types
 export type CreditActionsTypes = ReturnType<
 	| typeof setItems
+  | typeof setIsFetchingItems
 >;
