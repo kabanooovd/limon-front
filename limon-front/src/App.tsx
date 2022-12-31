@@ -1,9 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { ItemsController } from './api/controllers.ts/ItemsController';
-import './App.css';
 import { Toaster } from './components/Toaster';
 import { onGetItemsList } from './redux/items/items-reducer';
+import { AppStyledWrapper } from './styles/appStyledWrapper';
 
 function App() {
   const dispatch = useDispatch()
@@ -11,10 +10,10 @@ function App() {
     dispatch(onGetItemsList({}))
   }, [])
   return (
-    <div>
+    <AppStyledWrapper>
       <Toaster />
-      limon app
-    </div>
+      limon app  - приложение лимона?
+    </AppStyledWrapper>
   );
 }
 
