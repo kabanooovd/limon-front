@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { PageWrapper } from "../../components"
 import { IItem } from "../../redux/items/items-type"
 import { AppRootStateType } from "../../redux/store"
+import { ItemModal } from "./ItemModal"
 import { ItemsList } from "./ItemsList"
 
 export const ItemsListContainer = () => {
@@ -12,6 +13,7 @@ export const ItemsListContainer = () => {
 
   return (
     <PageWrapper isFetching={isFetching}>
+      <ItemModal />
       {itemsList && <ItemsList itemsList={itemsList}/>}
     </PageWrapper>
   )

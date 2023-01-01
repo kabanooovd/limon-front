@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { IItem } from "../../redux/items/items-type";
 
+const { REACT_APP_PROXY_URL } = process.env
+
 const Container = styled.div`
   margin: 20px;
   padding: 20px;
@@ -73,7 +75,7 @@ export const ItemCard: React.FC<IItem & {buttons: {title: string, onClick:(data:
        <span>{item_description}</span>
     </OptionWrapper>}
     {item_image && <ImageWrapper>
-      <img src={"http://localhost:5000/" + item_image} width={250}/>
+      <img src={`${REACT_APP_PROXY_URL}/${item_image}`} width={250}/>
     </ImageWrapper>}
     <ButtonsWrapper>
     {buttons && buttons?.length > 0 && buttons.map(({title, onClick}) => {
