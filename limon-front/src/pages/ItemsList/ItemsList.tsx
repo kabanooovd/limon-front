@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { ItemCard } from "../../components";
 import { obGetItemById } from "../../redux/items/items-reducer";
@@ -20,10 +21,13 @@ export const ItemsList: React.FC<IItemsList> = (props) => {
   const { itemsList } = props
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const onHadleAction = (data: IItem) => {
     const { id } = data
-    dispatch(obGetItemById({id}))
+    dispatch(obGetItemById({id, onSuccess: () => {
+      navigate(`${id}`)
+    }}))
   }
 
   const buttons = [

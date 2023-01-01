@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { GrClose } from "react-icons/gr"
 
-const CloseButtonWrapper = styled.div`
+const CloseButtonWrapper = styled.div<any>`
   position: absolute;
   top: 10px;
   right: 10px;
-  background: grey;
+  background: ${({theme}) => theme.WHITE};
   border-radius: 30px;
   display: flex;
   cursor: pointer;

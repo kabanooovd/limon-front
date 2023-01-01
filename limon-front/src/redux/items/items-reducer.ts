@@ -49,6 +49,7 @@ export const obGetItemById = ({id, onSuccess} : {id: string, onSuccess?: () => v
     const { data } = await client.onGetItemById({id})
     dispatch(setChosenItem(data))
     dispatch(setIsFetchingItems(false))
+    onSuccess && onSuccess()
   } catch(err) {
     const error = err as AxiosError
 		onToasting({type: "error", message: "что-то пошло не так"})

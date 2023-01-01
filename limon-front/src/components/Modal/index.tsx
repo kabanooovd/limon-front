@@ -3,7 +3,7 @@ import styled, { css, keyframes } from "styled-components";
 
 interface IModalProps {
   show: boolean,
-  onClose: () => void,
+  // onClose: () => void,
   children: React.ReactNode,
 }
 
@@ -32,8 +32,8 @@ const StyledModal = styled.div<IModalProps>`
   backdrop-filter: blur(5px) saturate(20%) contrast(100%);
 `;
 
-const ModalContent = styled.div`
-  background: #FFFFFF;
+const ModalContent = styled.div<any>`
+  background: ${({theme}) => theme.WHITE};
   min-width: 600px;
   min-height: 400px;
   max-height: 90%;
@@ -46,24 +46,13 @@ const ModalContent = styled.div`
   animation-fill-mode: forwards;
 `
 
-const CloseButtonWrapper = styled.div`
-  position: absolute;
-  right: 10px;
-  background: "grey";
-  border-radius: 30px;
-  display: flex;
-  cursor: pointer;
-`;
+
 
 export const Modal = (props: IModalProps) => {
   return <StyledModal {...props}>
     <Container>
       <ModalContent>
-        {/* <CloseButtonWrapper onClick={props.onClose}>
-          <Icon iconName="close"/>
-        </CloseButtonWrapper> */}
         {props.children}
-        
       </ModalContent>
     </Container>
   </StyledModal>
