@@ -14,6 +14,9 @@ const StyledHeader = styled.div<any>`
   background: ${({theme}) => theme.HEADER_BACKGROUND};
   min-height: 80px;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const StyledFooter = styled.div`
@@ -26,7 +29,7 @@ const StyledFooter = styled.div`
 `;
 
 const StyledContent = styled.div`
-  /* height: 100%; */
+  height: 100%;
 `;
 
 export const PageWrapper: React.FC<{isFetching: boolean}> = (props) => {
@@ -34,7 +37,11 @@ export const PageWrapper: React.FC<{isFetching: boolean}> = (props) => {
   return (
     <StyledContainer>
       {isFetching && <Preloader />}
-      <StyledHeader>header</StyledHeader>
+      <StyledHeader>
+        <h1>Logo</h1>
+        <div>navigations</div>
+        <div>control</div>
+      </StyledHeader>
       <StyledContent>
       {props.children}
       </StyledContent>

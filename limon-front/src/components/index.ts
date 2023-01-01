@@ -4,6 +4,7 @@ import { PageWrapper } from "./PageWrapper"
 import { ItemCard } from "./ItemCard"
 import { Modal } from "./Modal"
 import { CloseFeature } from "./CloseFeature"
+import { Field } from "./Field"
 
 export {
   Toaster,
@@ -11,4 +12,5 @@ export {
   ItemCard,
   Modal,
   CloseFeature,
+  Field,
 }
