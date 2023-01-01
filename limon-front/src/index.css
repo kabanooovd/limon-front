@@ -1,0 +1,60 @@
+body {
+  
+  font-family: "Open-sans";
+
+}
+
+
+
+@font-face {
+	font-family: "Formular";
+	src: local("Formular"), url(styles/assets/fonts/Formular.woff2);
+}
+
+@font-face {
+  font-family: "Formular";
+  src: local("Formular"), url(styles/assets/fonts/Formular-Bold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+	font-family: "Ethnocentric";
+	src: local("Ethnocentric"), url(styles/assets/fonts/ethnocentric.ttf);
+}
+
+@font-face {
+	font-family: "Open-sans";
+	src: local("Open-sans"), url(styles/assets/fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open-sans";
+    font-weight: 600;
+    src: local("Open-sans"), url(styles/assets/fonts/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: "Exo2-Bold";
+	src: local("Exo2-Bold"), url(styles/assets/fonts/Exo2-Bold.ttf);
+}
+
+@font-face {
+	font-family: "Exo2-Medium";
+	src: local("Exo2-Medium"), url(styles/assets/fonts/Exo2-Medium.ttf);
+}
+
+@font-face {
+	font-family: "Exo2-Regular";
+	src: local("Exo2-Regular"), url(styles/assets/fonts/Exo2-Regular.ttf);
+}
+
+@font-face {
+	font-family: "verdanab";
+	src: local("verdanab"), url(styles/assets/fonts/verdanab.ttf);
+}
+
+@font-face {
+	font-family: "MyriadPro-Regular";
+	src: local("MyriadPro-Regular"), url(styles/assets/fonts/MyriadPro-Regular.otf);
+}
+
