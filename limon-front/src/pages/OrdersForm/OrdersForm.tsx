@@ -1,7 +1,7 @@
 import { FormikValues } from "formik";
 import React from "react";
 import styled from "styled-components";
-import { CheckBoxField, Field } from "../../components";
+import { CheckBoxField, Field, PageTitle, QuantityInput } from "../../components";
 
 const Container = styled.div`
   padding: 30px 60px;
@@ -47,6 +47,7 @@ export const OrdersForm: React.FC<{
   } = props
   return <Container>
     <form onSubmit={formik.handleSubmit}>
+      <PageTitle title="Оформить заказ" />
       <Row>
         <Field 
           label="ФИО"
@@ -118,6 +119,9 @@ export const OrdersForm: React.FC<{
           onChange={formik.handleChange}
           value={formik.values.postolindex || ""}
         />
+      </Row>
+      <Row>
+        <QuantityInput formik={formik} formItem={"quantity"} label={"Укажите колличество товаров"}/>
       </Row>
       <CheckBoxWrapper>
         <CheckBoxField 

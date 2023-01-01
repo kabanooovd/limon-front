@@ -21,7 +21,7 @@ export const OrdersFormContainer = () => {
     postolindex: null,
     house: null,
     flat: null,
-    quantity: 4, //
+    quantity: 1, 
     isagreewithconditions: true
   }
 

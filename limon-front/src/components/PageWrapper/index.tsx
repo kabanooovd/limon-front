@@ -29,7 +29,7 @@ const StyledFooter = styled.div`
 `;
 
 const StyledContent = styled.div`
-  height: 100%;
+  /* height: 100%; */
 `;
 
 export const PageWrapper: React.FC<{isFetching: boolean}> = (props) => {

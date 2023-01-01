@@ -30,7 +30,7 @@ const StyledField = styled.input<any>`
 `;
 
 const Span = styled.span<any>`
-  color: red;
+  color: ${({theme}) => theme.FIELD_LABEL_COLOR};
   position: absolute;
 
   transition-duration: 500ms;
