@@ -1,7 +1,8 @@
-import { setIsFetchingItems, setItems } from "./items-action";
+import { setChosenItem, setIsFetchingItems, setItems } from "./items-action";
 
 export interface IItemsReducerState {
-  data: IItem[] | null;
+  itemsList: IItem[] | null;
+  chosenItem: IItem | null;
   isFetching: boolean;
 }
 
@@ -18,5 +19,6 @@ export interface IItem {
 // Items Action Types
 export type CreditActionsTypes = ReturnType<
 	| typeof setItems
+  | typeof setChosenItem
   | typeof setIsFetchingItems
 >;

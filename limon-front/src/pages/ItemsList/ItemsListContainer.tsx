@@ -7,7 +7,7 @@ import { ItemsList } from "./ItemsList"
 
 export const ItemsListContainer = () => {
 
-  const itemsList = useSelector<AppRootStateType, IItem[] | null>(state => state.itemsReducer.data)
+  const itemsList = useSelector<AppRootStateType, IItem[] | null>(state => state.itemsReducer.itemsList)
   const isFetching = useSelector<AppRootStateType, boolean>(state => state.itemsReducer.isFetching)
 
   return (

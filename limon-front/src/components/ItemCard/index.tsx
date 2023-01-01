@@ -41,7 +41,7 @@ const Action = styled.button<any>`
   border-radius: 4px;
 `;
 
-export const ItemCard: React.FC<IItem & {buttons: {title: string, onClick:() => void}[]}> = ({
+export const ItemCard: React.FC<IItem & {buttons: {title: string, onClick:(data: IItem) => void}[]}> = ({
   category,
   id,
   item_description,
@@ -77,7 +77,18 @@ export const ItemCard: React.FC<IItem & {buttons: {title: string, onClick:() => 
     </ImageWrapper>}
     <ButtonsWrapper>
     {buttons && buttons?.length > 0 && buttons.map(({title, onClick}) => {
-      return <Action onClick={onClick}>{title}</Action>
+      const onClickHandler = () => {
+        onClick({
+          category,
+          id,
+          item_description,
+          item_image,
+          item_name,
+          price,
+          rating,
+        })
+      }
+      return <Action key={id} onClick={onClickHandler}>{title}</Action>
     })}
     </ButtonsWrapper>
   </Container>

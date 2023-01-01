@@ -7,4 +7,9 @@ export class ItemsController {
     const _queries = queries ? `?${queries}` : ""
     return instance.get(`${ITEMS}${_queries}`)
   }
+
+  onGetItemById({id, queries} : {id: string, queries?: string}) {
+    const _queries = queries ? `?${queries}` : ""
+    return instance.get(`${ITEMS}/${id}${_queries}`)
+  }
 }

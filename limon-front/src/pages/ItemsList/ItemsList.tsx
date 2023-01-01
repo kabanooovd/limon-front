@@ -1,6 +1,8 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { ItemCard } from "../../components";
+import { obGetItemById } from "../../redux/items/items-reducer";
 import { IItem } from "../../redux/items/items-type";
 
 interface IItemsList {
@@ -16,8 +18,16 @@ const Container = styled.div`
 
 export const ItemsList: React.FC<IItemsList> = (props) => {
   const { itemsList } = props
+
+  const dispatch = useDispatch()
+
+  const onHadleAction = (data: IItem) => {
+    const { id } = data
+    dispatch(obGetItemById({id}))
+  }
+
   const buttons = [
-    {title: "Подробнее", onClick: () => console.log("clect")},
+    {title: "Подробнее", onClick: onHadleAction},
   ]
   return <Container>
     {itemsList.map((item) => {
