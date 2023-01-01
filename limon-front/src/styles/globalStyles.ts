@@ -40,6 +40,7 @@ export const theme = {
 
 	FIELD_BACKGROUND: "#f0f0f0",
 	FIELD_TEXT_COLOR: "#8c8c8c",
+	CHECK_BOX_CHECKED_BACKGROUND: "#40b353",
 
   HEADER_BACKGROUND: "grey",
   FOOTER_BACKGROUND: "black"

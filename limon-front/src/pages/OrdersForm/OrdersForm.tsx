@@ -1,7 +1,7 @@
 import { FormikValues } from "formik";
 import React from "react";
 import styled from "styled-components";
-import { Field } from "../../components";
+import { CheckBoxField, Field } from "../../components";
 
 const Container = styled.div`
   padding: 30px 60px;
@@ -27,6 +27,16 @@ const SubmitButton = styled.button`
   border: none;
   color: ${({theme}) => theme.WHITE};
   background: ${({theme}) => theme.RED};
+`;
+
+const CheckBoxWrapper = styled.div`
+  margin: 40px 0 10px 0;
+  display: flex;
+  align-items: center;
+`;
+
+const CheckBoxLabel = styled.span`
+  margin: 0 0 0 20px;
 `;
 
 export const OrdersForm: React.FC<{
@@ -109,6 +119,16 @@ export const OrdersForm: React.FC<{
           value={formik.values.postolindex || ""}
         />
       </Row>
+      <CheckBoxWrapper>
+        <CheckBoxField 
+          checked={formik.values.isagreewithconditions} 
+          formItem={"isagreewithconditions"} 
+          onChange={() => formik.setFieldValue("isagreewithconditions", !formik.values.isagreewithconditions)} 
+        />
+        <CheckBoxLabel>
+          Я принимаю условия соглашения
+        </CheckBoxLabel>
+      </CheckBoxWrapper>
       <Row>
         <SubmitButton>Заказать</SubmitButton>
       </Row>
