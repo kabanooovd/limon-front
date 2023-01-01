@@ -41,10 +41,6 @@ export const ItemModal: React.FC<{item: IItem, show: boolean}> = (props) => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  React.useEffect(() => {
-
-  } ,[])
-
   const ITEM_MODAL_BUTTONS = [
     {title: "Заказать", onClick: () => {}},
   ]

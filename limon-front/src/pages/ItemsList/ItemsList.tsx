@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { useParams } from "react-router";
 import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { ItemCard } from "../../components";
@@ -22,6 +23,11 @@ export const ItemsList: React.FC<IItemsList> = (props) => {
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const { id } = useParams()
+
+  React.useEffect(() => {
+    id && dispatch(obGetItemById({id}))
+  } ,[])
 
   const onHadleAction = (data: IItem) => {
     const { id } = data
