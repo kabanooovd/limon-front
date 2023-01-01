@@ -1,7 +1,7 @@
 import { setIsFetchingItems, setItems } from "./items-action";
 
 export interface IItemsReducerState {
-  data: IItem | null;
+  data: IItem[] | null;
   isFetching: boolean;
 }
 

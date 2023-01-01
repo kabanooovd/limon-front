@@ -35,4 +35,12 @@ position: relative;
 
 export const theme = {
 	RED: 'red',
+	WHITE: '#FFFFFF',
+  DARK_BLUE: '#020454',
+
+
+
+
+  HEADER_BACKGROUND: "grey",
+  FOOTER_BACKGROUND: "black"
 } as const;

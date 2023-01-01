@@ -1,0 +1,27 @@
+import React from "react";
+import styled from "styled-components";
+import { ItemCard } from "../../components";
+import { IItem } from "../../redux/items/items-type";
+
+interface IItemsList {
+  itemsList: IItem[];
+}
+
+const Container = styled.div`
+  padding: 30px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+export const ItemsList: React.FC<IItemsList> = (props) => {
+  const { itemsList } = props
+  const buttons = [
+    {title: "Подробнее", onClick: () => console.log("clect")},
+  ]
+  return <Container>
+    {itemsList.map((item) => {
+      return <ItemCard key={item.id} {...item} buttons={buttons}/>
+    })}
+  </Container>
+}

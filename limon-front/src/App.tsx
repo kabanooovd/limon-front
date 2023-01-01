@@ -1,7 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Toaster } from './components/Toaster';
+import { Toaster } from './components';
 import { onGetItemsList } from './redux/items/items-reducer';
+import { AppRoutes } from './Routes';
 import { AppStyledWrapper } from './styles/appStyledWrapper';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
   return (
     <AppStyledWrapper>
       <Toaster />
-      limon app  - приложение лимона?
+      {/* limon app  - приложение лимона? */}
+      <AppRoutes />
     </AppStyledWrapper>
   );
 }
