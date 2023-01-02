@@ -4,7 +4,7 @@ import { ItemsController } from "../../api/controllers.ts/ItemsController"
 import { ERRORS_HANDLER } from "../../config"
 import { onToasting } from "../../utils/onToasting"
 import { setChosenItem, setIsFetchingItems, setItems, SET_CHOSEN_ITEM, SET_ITEMS_DATA, SET_ITEMS_FETCHING } from "./items-action"
-import { CreditActionsTypes, IItemsReducerState } from "./items-type"
+import { ItemsActionsTypes, IItemsReducerState } from "./items-type"
 
 const initialState: IItemsReducerState = {
   itemsList: null,
@@ -12,7 +12,7 @@ const initialState: IItemsReducerState = {
   isFetching: false,
 }
 
-export const itemsReducer = (state: IItemsReducerState = initialState, action: CreditActionsTypes): IItemsReducerState => {
+export const itemsReducer = (state: IItemsReducerState = initialState, action: ItemsActionsTypes): IItemsReducerState => {
 	switch (action.type) {
     case SET_ITEMS_DATA: 
       return {...state, itemsList: action.payload}

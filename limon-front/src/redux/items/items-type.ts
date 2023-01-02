@@ -17,7 +17,7 @@ export interface IItem {
 }
 
 // Items Action Types
-export type CreditActionsTypes = ReturnType<
+export type ItemsActionsTypes = ReturnType<
 	| typeof setItems
   | typeof setChosenItem
   | typeof setIsFetchingItems

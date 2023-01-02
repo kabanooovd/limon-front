@@ -27,6 +27,10 @@ const SubmitButton = styled.button`
   border: none;
   color: ${({theme}) => theme.WHITE};
   background: ${({theme}) => theme.RED};
+
+  &:disabled {
+    opacity: 0.5;
+  }
 `;
 
 const CheckBoxWrapper = styled.div`
@@ -134,7 +138,7 @@ export const OrdersForm: React.FC<{
         </CheckBoxLabel>
       </CheckBoxWrapper>
       <Row>
-        <SubmitButton>Заказать</SubmitButton>
+        <SubmitButton disabled={!formik.values.isagreewithconditions}>Заказать</SubmitButton>
       </Row>
     </form>
   </Container>
