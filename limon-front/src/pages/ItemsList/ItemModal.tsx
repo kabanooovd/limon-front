@@ -7,7 +7,7 @@ import { APP_ROUTES } from "../../config";
 import { setChosenItem } from "../../redux/items/items-action";
 import { IItem } from "../../redux/items/items-type"
 
-const { ITEMS } = APP_ROUTES
+const { ITEMS, ORDERS } = APP_ROUTES
 
 const { REACT_APP_PROXY_URL } = process.env
 
@@ -42,7 +42,7 @@ export const ItemModal: React.FC<{item: IItem, show: boolean}> = (props) => {
   const navigate = useNavigate()
 
   const ITEM_MODAL_BUTTONS = [
-    {title: "Заказать", onClick: () => {}},
+    {title: "Заказать", onClick: () => navigate(`/${ORDERS}/form/${id}`)},
   ]
 
   const onClose = () => {
