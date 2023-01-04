@@ -13,4 +13,5 @@ export const APP_ROUTES = {
   AUTH: 'auth',
   ORDERS: 'orders',
   USERS: 'users',
+  ADD_ITEM: '$add',
 }

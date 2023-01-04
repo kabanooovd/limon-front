@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router";
 import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { ItemCard } from "../../components";
+import { AddItemButton, ItemCard } from "../../components";
 import { obGetItemById } from "../../redux/items/items-reducer";
 import { IItem } from "../../redux/items/items-type";
 
@@ -11,7 +11,19 @@ interface IItemsList {
   itemsList: IItem[];
 }
 
+const Centered = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const ItemsListWrapper = styled.div`
   padding: 30px 60px;
   display: flex;
   flex-wrap: wrap;
@@ -40,8 +52,13 @@ export const ItemsList: React.FC<IItemsList> = (props) => {
     {title: "Подробнее", onClick: onHadleAction},
   ]
   return <Container>
-    {itemsList.map((item) => {
-      return <ItemCard key={item.id} {...item} buttons={buttons}/>
-    })}
+    <Centered>
+      <AddItemButton padding="10px 20px" onClick={() => alert("sd")}>Добавить Товар</AddItemButton>
+    </Centered>
+    <ItemsListWrapper>
+      {itemsList.map((item) => {
+        return <ItemCard key={item.id} {...item} buttons={buttons}/>
+      })}
+    </ItemsListWrapper>
   </Container>
 }

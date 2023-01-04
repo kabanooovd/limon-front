@@ -8,6 +8,7 @@ import { Field } from "./Field"
 import { CheckBoxField } from "./CheckBox"
 import { QuantityInput } from "./Quantity"
 import { PageTitle } from "./PageTitle"
+import { AddItemButton } from "./Bottons"
 
 export {
   Toaster,
@@ -19,4 +20,5 @@ export {
   CheckBoxField,
   QuantityInput,
   PageTitle,
+  AddItemButton,
 }
